@@ -6,7 +6,7 @@ public class SelfDestruct : MonoBehaviour
 {
     [SerializeField] float timeTillDestroy = 3f;
 
-    private void Start()
+    void Start()
     {
         Destroy(gameObject, timeTillDestroy);
     }

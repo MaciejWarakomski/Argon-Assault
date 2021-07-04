@@ -41,7 +41,7 @@ public class PlayerControls : MonoBehaviour
         ProcessFiring();
     }
 
-    private void ProcessTranslation()
+    void ProcessTranslation()
     {
         xThrow = Input.GetAxis("Horizontal");
         yThrow = Input.GetAxis("Vertical");
@@ -57,7 +57,7 @@ public class PlayerControls : MonoBehaviour
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
     }
 
-    private void ProcessRotation()
+    void ProcessRotation()
     {
         float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
         float pitchDueToControlThrow = yThrow * controlPitchFactor;
@@ -69,7 +69,7 @@ public class PlayerControls : MonoBehaviour
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
-    private void ProcessFiring()
+    void ProcessFiring()
     {
         if (Input.GetButton("Fire1"))
         {
@@ -81,7 +81,7 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    private void SetLasersActive(bool isActive)
+    void SetLasersActive(bool isActive)
     {
         foreach (GameObject laser in lasers)
         {

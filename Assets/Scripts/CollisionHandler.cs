@@ -6,19 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    [SerializeField] private float loadTimer = 1f;
+    [SerializeField] float loadTimer = 1f;
 
-    [SerializeField] private PlayerControls playerControls;
-    [SerializeField] private ParticleSystem crashVFX;
-    [SerializeField] private MeshRenderer meshRenderer;
-    [SerializeField] private MeshCollider meshCollider;
+    [SerializeField] PlayerControls playerControls;
+    [SerializeField] ParticleSystem crashVFX;
+    [SerializeField] MeshRenderer meshRenderer;
+    [SerializeField] MeshCollider meshCollider;
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         StartCrashSequence();
     }
 
-    private void StartCrashSequence()
+    void StartCrashSequence()
     {
         crashVFX.Play();
         meshRenderer.enabled = false;
@@ -27,7 +27,7 @@ public class CollisionHandler : MonoBehaviour
         Invoke("ReloadLevel", loadTimer);
     }
 
-    private void ReloadLevel()
+    void ReloadLevel()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
