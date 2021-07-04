@@ -254,6 +254,7 @@ MonoBehaviour:
   scorePerHit: 15
   hitPoints: 2
   deathVFX: {fileID: 2457687613030458312, guid: 7b7cc850f0bed854cb639dc15caadf78, type: 3}
+  hitVFX: {fileID: 2457687613030458312, guid: d50bb879b05273f4ab16be89f104ef42, type: 3}
   parent: {fileID: 1950772158}
 --- !u!1 &277697358
 GameObject:
@@ -266,8 +267,8 @@ GameObject:
   - component: {fileID: 277697363}
   - component: {fileID: 277697362}
   - component: {fileID: 277697361}
-  - component: {fileID: 277697360}
   - component: {fileID: 277697359}
+  - component: {fileID: 277697360}
   m_Layer: 0
   m_Name: Enemy 2 (2)
   m_TagString: Untagged
@@ -288,11 +289,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorePerHit: 15
-  hitPoints: 2
+  hitPoints: 10
   deathVFX: {fileID: 2457687613030458312, guid: 7b7cc850f0bed854cb639dc15caadf78, type: 3}
+  hitVFX: {fileID: 2457687613030458312, guid: d50bb879b05273f4ab16be89f104ef42, type: 3}
   parent: {fileID: 1950772158}
---- !u!136 &277697360
-CapsuleCollider:
+--- !u!65 &277697360
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -301,9 +303,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &277697361
 MeshRenderer:
@@ -536,8 +537,8 @@ GameObject:
   - component: {fileID: 1372940964}
   - component: {fileID: 1372940963}
   - component: {fileID: 1372940962}
-  - component: {fileID: 1372940961}
   - component: {fileID: 1372940960}
+  - component: {fileID: 1372940961}
   m_Layer: 0
   m_Name: Enemy 2 (1)
   m_TagString: Untagged
@@ -558,11 +559,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorePerHit: 15
-  hitPoints: 2
+  hitPoints: 6
   deathVFX: {fileID: 2457687613030458312, guid: 7b7cc850f0bed854cb639dc15caadf78, type: 3}
+  hitVFX: {fileID: 2457687613030458312, guid: d50bb879b05273f4ab16be89f104ef42, type: 3}
   parent: {fileID: 1950772158}
---- !u!136 &1372940961
-CapsuleCollider:
+--- !u!65 &1372940961
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -571,9 +573,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1372940962
 MeshRenderer:
@@ -791,8 +792,8 @@ GameObject:
   - component: {fileID: 1660131907}
   - component: {fileID: 1660131906}
   - component: {fileID: 1660131905}
-  - component: {fileID: 1660131904}
   - component: {fileID: 1660131903}
+  - component: {fileID: 1660131904}
   m_Layer: 0
   m_Name: Enemy 2
   m_TagString: Untagged
@@ -813,11 +814,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorePerHit: 15
-  hitPoints: 2
+  hitPoints: 4
   deathVFX: {fileID: 2457687613030458312, guid: 7b7cc850f0bed854cb639dc15caadf78, type: 3}
+  hitVFX: {fileID: 2457687613030458312, guid: d50bb879b05273f4ab16be89f104ef42, type: 3}
   parent: {fileID: 1950772158}
---- !u!136 &1660131904
-CapsuleCollider:
+--- !u!65 &1660131904
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -826,9 +828,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1660131905
 MeshRenderer:
@@ -1116,6 +1117,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 842984068449835427, guid: c1147c75dc1536a4ab804af5e5a92aa2, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 842984068449835427, guid: c1147c75dc1536a4ab804af5e5a92aa2, type: 3}
+      propertyPath: TriggerModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 842984068449835427, guid: c1147c75dc1536a4ab804af5e5a92aa2, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 842984068449835427, guid: c1147c75dc1536a4ab804af5e5a92aa2, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629685383431756265, guid: c1147c75dc1536a4ab804af5e5a92aa2, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629685383431756265, guid: c1147c75dc1536a4ab804af5e5a92aa2, type: 3}
+      propertyPath: TriggerModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629685383431756265, guid: c1147c75dc1536a4ab804af5e5a92aa2, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629685383431756265, guid: c1147c75dc1536a4ab804af5e5a92aa2, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5782871112761217713, guid: c1147c75dc1536a4ab804af5e5a92aa2, type: 3}
       propertyPath: m_RootOrder
       value: 2
