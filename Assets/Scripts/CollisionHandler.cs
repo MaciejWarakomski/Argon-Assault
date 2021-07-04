@@ -9,6 +9,9 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] private float loadTimer = 1f;
 
     [SerializeField] private PlayerControls playerControls;
+    [SerializeField] private ParticleSystem crashVFX;
+    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private MeshCollider meshCollider;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,7 +20,10 @@ public class CollisionHandler : MonoBehaviour
 
     private void StartCrashSequence()
     {
+        crashVFX.Play();
+        meshRenderer.enabled = false;
         playerControls.enabled = false;
+        meshCollider.enabled = false;
         Invoke("ReloadLevel", loadTimer);
     }
 
