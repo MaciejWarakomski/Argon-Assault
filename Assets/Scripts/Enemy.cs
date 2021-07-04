@@ -9,12 +9,21 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] GameObject deathVFX;
     [SerializeField] GameObject hitVFX;
-    [SerializeField] Transform parent;
+    Transform parent;
     ScoreBoard scoreBoard;
 
     void Start()
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
+        parent = GameObject.FindWithTag("SpawnAtRuntime").transform;
+        AddRigidbody();
+    }
+
+    void AddRigidbody()
+    {
+        Rigidbody rigidBody = gameObject.AddComponent<Rigidbody>();
+        rigidBody.useGravity = false;
+        rigidBody.detectCollisions = true;
     }
 
     void OnParticleCollision(GameObject other)

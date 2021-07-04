@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5782871112590801484}
   - component: {fileID: 5782871112590801483}
   - component: {fileID: 5782871112590801482}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5782871112761217713}
   - component: {fileID: 5782871112761217712}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,9 +142,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5782871112761217713}
     m_Modifications:
+    - target: {fileID: 1469436018510629058, guid: de43cce535449c64b9036072bc933201, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678092281930929692, guid: de43cce535449c64b9036072bc933201, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3490693988220143536, guid: de43cce535449c64b9036072bc933201, type: 3}
       propertyPath: m_Name
       value: Player Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490693988220143536, guid: de43cce535449c64b9036072bc933201, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3493652837026979208, guid: de43cce535449c64b9036072bc933201, type: 3}
       propertyPath: m_RootOrder
@@ -189,6 +201,26 @@ PrefabInstance:
     - target: {fileID: 3493652837026979208, guid: de43cce535449c64b9036072bc933201, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298713481068480648, guid: de43cce535449c64b9036072bc933201, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668120463435399205, guid: de43cce535449c64b9036072bc933201, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735990213201750443, guid: de43cce535449c64b9036072bc933201, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959544336191154657, guid: de43cce535449c64b9036072bc933201, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999549295725641839, guid: de43cce535449c64b9036072bc933201, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.21999383
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de43cce535449c64b9036072bc933201, type: 3}

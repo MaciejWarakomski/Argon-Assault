@@ -27,6 +27,11 @@ public class PlayerControls : MonoBehaviour
     float xThrow;
     float yThrow;
 
+    void Awake()
+    {
+        SetLasersActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
